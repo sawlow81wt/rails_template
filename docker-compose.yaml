@@ -20,6 +20,10 @@ services:
       - .:/myapp
     volumes_from:
       - data
+    environment:
+      MYSQL_USERNAME: root
+      MYSQL_PASSWORD: mysql
+      MYSQL_HOST: db
     tty: true
     stdin_open: true
   spring:
