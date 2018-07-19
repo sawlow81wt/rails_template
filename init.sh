@@ -6,7 +6,7 @@ touch Gemfile.lock
 docker-compose build
 
 docker-compose run --rm rails rails new . --webpack=vue --force --database=mysql --skip-test
-docker-compose run --rm rails rails webpack:install:vue
+docker-compose run --rm rails rails webpacker:install:vue
 
 cp template/database.yml config/database.yml
 
