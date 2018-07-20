@@ -4,7 +4,7 @@ services:
     container_name: db
     image: mysql:5.7
     environment:
-      MYSQL_ROOT_PASSWORD: mysql
+      MYSQL_ROOT_PASSWORD: password
     volumes_from:
       - data
   rails: &app_base
@@ -20,10 +20,6 @@ services:
       - .:/myapp
     volumes_from:
       - data
-    environment:
-      MYSQL_USERNAME: root
-      MYSQL_PASSWORD: mysql
-      MYSQL_HOST: db
     tty: true
     stdin_open: true
   spring:
